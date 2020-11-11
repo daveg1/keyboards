@@ -23,18 +23,22 @@ document.getElementById('locale-select').addEventListener('change', function(){
 
 })
 
-function togglePressed(e){
-    const el = document.querySelector(`[data-key="${e.code}"]`);
+element.addEventListener('keydown', (e) => {
+    if(e.ctrlKey || e.altKey)
+        return
     
-    if(el)
-        if(el.classList.contains('pressed'))
-            el.classList.remove('pressed');
-        else
-        el.classList.add('pressed');
-}
+    const el = document.querySelector(`[data-key="${e.code}"]`)
 
-element.addEventListener('keydown', togglePressed)
-element.addEventListener('keyup', togglePressed)
+    if(el)
+        el.classList.add('pressed')
+})
+
+element.addEventListener('keyup', (e) => {
+    const el = document.querySelector(`[data-key="${e.code}"]`)
+
+    if(el)
+        el.classList.remove('pressed')
+})
 
 function downloadTextfile(){
     if(!element.value)

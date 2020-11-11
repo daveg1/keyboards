@@ -4,19 +4,22 @@
 class Keyboard {
 
     layouts = new Map([
-        // Defaults (avoid repetition)
+        // Allow keyboards to inherit from one another.
+        // Avoids repitition.
         ['Defaults',
             {
-                'de': 'en',
+                'de': 'en', // Meaning de inherits from en
+                // another could be fi: de, Finnish inheriting from German
+                'pl': 'en',
+                'by': 'ru',
                 'ua': 'ru',
-                'by': 'ru'
             }
         ],
 
         // 1. Number Row
         ["Backquote", {
             "en": [96,126],
-            "ru": [1105, 1025]
+            "ru": [1105,1025]
         }],
         ["Digit1", {
             "en": [49,33],
@@ -60,7 +63,7 @@ class Keyboard {
         }],
         ["Minus", {
             "en": [45,95],
-            "de": [45, 223],
+            "de": [45,223],
             "ru": [45,95]
         }],
         ["Equal", {
@@ -105,7 +108,8 @@ class Keyboard {
         }],
         ["KeyO", {
             "en": [111,79],
-            "ru": [1097,1065]
+            "ru": [1097,1065],
+            "by": [1118,1038]
         }],
         ["KeyP", {
             "en": [112,80],
@@ -114,11 +118,14 @@ class Keyboard {
         ["BracketLeft", {
             "en": [91,123],
             "de": [252, 220],
+            "pl": [380,324],
             "ru": [1093,1061]
         }],
         ["BracketRight", {
             "en": [93,125],
-            "ru": [1098,1066]
+            "pl": [347,263],
+            "ru": [1098,1066],
+            "ua": [1111,1031]
         }],
         // 2.1 Top (QWERTY) row end
 
@@ -129,7 +136,8 @@ class Keyboard {
         }],
         ["KeyS", {
             "en": [115,83],
-            "ru": [1099,1067]
+            "ru": [1099,1067],
+            "ua": [1110,1030]
         }],
         ["KeyD", {
             "en": [100,68],
@@ -162,23 +170,28 @@ class Keyboard {
         ["Semicolon", {
             "en": [59,58],
             "de": [246,214],
+            "pl": [322,321],
             "ru": [1078,1046]
         }],
         ["Quote", {
             "en": [39,34],
-            "de": [228, 196],
-            "ru": [1101,1069]
+            "de": [228,196],
+            "pl": [261,260],
+            "ru": [1101,1069],
+            "ua": [1108,1028]
         }],
         // 3.1 Home row end
 
         // 4. Bottom row
         ["Backslash", {
             "en": [92,124],
-            "ru": [92,47]
+            "ru": [92,47],
+            "ua": [1169,1168]
         }],
         ["IntlBackslash", {
-            "en": [92, 124],
-            "ru": [92,47]
+            "en": [92,124],
+            "ru": [92,47],
+            "ua": [1169,1168]
         }],
         ["KeyZ", {
             "en": [122,90],
@@ -211,10 +224,12 @@ class Keyboard {
         }],
         ["Comma", {
             "en": [44,60],
+            "pl": [243,378],
             "ru": [1073,1041]
         }],
         ["Period", {
             "en": [46,62],
+            "pl": [281,280],
             "ru": [1102,1070]
         }],
         ["Slash", {
