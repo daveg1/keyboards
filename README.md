@@ -5,9 +5,12 @@ A virtual keyboard to let you type with keyboard layouts of other languages.
 
 | Locale  | code |
 |---------|------|
+| Belarusian |  by  |
 | English |  en  |
 | German  |  de  |
+| Polish  |  pl  |
 | Russian |  ru  |
+| Ukranian  |  ua  |
 
 ## Usage
 Simply add the file into your webpage, then create a new Keyboard instance like so:
