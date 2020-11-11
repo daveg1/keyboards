@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font: 16px/1.42 "Segoe UI", arial, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 1.5em 0 1em;
+}
+
+.header {
+    background: #002d80 linear-gradient(67deg, hsl(219, 100%, 25%) 36%, #2452a8);
+    overflow: hidden;
+    text-align: center;
+}
+
+.demo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 4em;
+}
+
+.demo-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    max-width: 512px;
+    width: 100%;
+}
+
+.demo-form-bar {
+    align-items: center;
+    border: 1px solid #efefef;
+    display: inline-flex;
+    margin-top: 1.5em;
+    padding: 1em;
+    flex: 0;
+}
+
+.demo-form-bar > *:not(:last-child) {
+    margin-right: 1em;
+}
+
+.input {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    height: 36px;
+    padding: 8px 12px;
+    transition: border-color 250ms ease-in-out;
+    width: 100%;
+}
+
+.input:focus {
+    border-color: #005cc5;
+    outline: 0;
+}
+
+.select {
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height: 28px;
+    padding: 4px 6px;
+}
+
+.select:hover {
+    border-color: #888;
+}
+
+.button {
+    background-color: #3369cc;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 28px;
+    padding: 0 12px;
+    transition: background-color 150ms;
+}
+
+.button:hover {
+    background-color: #4781eb;
+}
+
+.button:active {
+    background-color: #003eb3;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+/* Visual Keyboard */
+.keyboard {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.keyboard .row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6px;
+}
+
+.keyboard .key {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 2px #ccc;
+    cursor: pointer;
+    height: 42px;
+    font-size: 16px;
+    margin-right: 4px;
+    position: relative;
+    width: 42px;
+    user-select: none;
+}
+
+.keyboard .key:hover {
+    background-color: #fff;
+}
+
+.keyboard .key:focus {
+    outline: none;
+}
+
+.keyboard .key:active,
+.keyboard .key.pressed {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.keyboard .key-super {
+    color: #888;
+    font-size: 12px;
+    position: absolute;
+    right: 4px;
+    top: 2px;
+}
+
+/* Decorative keys */
+.keyboard .tab { width: 68px; }
+.keyboard .caps { width: 78px; }
+.keyboard .shift-l { width: 54px; }
+.keyboard .ntr,
+.keyboard .shift-r { flex: 1; }

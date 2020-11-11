@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Keyboard.js Test</title>
+        <link rel="stylesheet" href="demo.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1>Keyboard Demo</h1>
+        </header>
+        <main class="demo">
+            <div class="demo-form">
+                <input id="kb-input" class="input" type="text" autofocus autocomplete="off" spellcheck="false">
+                <div class="demo-form-bar">
+                    <select id="locale-select" class="select">
+                        <option value="en">English</option>
+                        <option value="de">German</option>
+                        <option selected default value="ru">Russian</option>
+                        <option value="ua">Ukrainian</option>
+                    </select>
+                    <button class="button" onclick="downloadTextfile();">Download as .txt</button>
+                </div>
+            </div>
+            <div class="keyboard">
+                <div class="row">
+                    <button class="key tab"></button>
+                    <button class="key" data-key="KeyQ">
+                        <span>й</span>
+                        <span class="key-super">q</span>
+                    </button>
+                    <button class="key" data-key="KeyW">
+                        <span>ц</span>
+                        <span class="key-super">w</span>
+                    </button>
+                    <button class="key" data-key="KeyE">
+                        <span>у</span>
+                        <span class="key-super">e</span>
+                    </button>
+                    <button class="key" data-key="KeyR">
+                        <span>к</span>
+                        <span class="key-super">r</span>
+                    </button>
+                    <button class="key" data-key="KeyT">
+                        <span>е</span>
+                        <span class="key-super">t</span>
+                    </button>
+                    <button class="key" data-key="KeyY">
+                        <span>н</span>
+                        <span class="key-super">y</span>
+                    </button>
+                    <button class="key" data-key="KeyU">
+                        <span>г</span>
+                        <span class="key-super">u</span>
+                    </button>
+                    <button class="key" data-key="KeyI">
+                        <span>ш</span>
+                        <span class="key-super">i</span>
+                    </button>
+                    <button class="key" data-key="KeyO">
+                        <span>щ</span>
+                        <span class="key-super">o</span>
+                    </button>
+                    <button class="key" data-key="KeyP">
+                        <span>з</span>
+                        <span class="key-super">p</span>
+                    </button>
+                    <button class="key" data-key="BracketLeft">
+                        <span>х</span>
+                        <span class="key-super">{</span>
+                        </button>
+                    <button class="key" data-key="BracketRight">
+                        <span>ъ</span>
+                        <span class="key-super">}</span>
+                    </button>
+                    <button class="key"></button>
+                </div>
+                <div class="row">
+                    <button class="key caps"></button>
+                    <button class="key" data-key="KeyA">
+                        <span>ф</span>
+                        <span class="key-super">a</span>
+                    </button>
+                    <button class="key" data-key="KeyS">
+                        <span>ы</span>
+                        <span class="key-super">s</span>
+                    </button>
+                    <button class="key" data-key="KeyD">
+                        <span>в</span>
+                        <span class="key-super">d</span>
+                    </button>
+                    <button class="key" data-key="KeyF">
+                        <span>а</span>
+                        <span class="key-super">f</span>
+                    </button>
+                    <button class="key" data-key="KeyG">
+                        <span>п</span>
+                        <span class="key-super">g</span>
+                    </button>
+                    <button class="key" data-key="KeyH">
+                        <span>р</span>
+                        <span class="key-super">h</span>
+                    </button>
+                    <button class="key" data-key="KeyJ">
+                        <span>о</span>
+                        <span class="key-super">j</span>
+                    </button>
+                    <button class="key" data-key="KeyK">
+                        <span>л</span>
+                        <span class="key-super">k</span>
+                    </button>
+                    <button class="key" data-key="KeyL">
+                        <span>д</span>
+                        <span class="key-super">l</span>
+                    </button>
+                    <button class="key" data-key="Semicolon">
+                        <span>ж</span>
+                        <span class="key-super">:</span>
+                    </button>
+                    <button class="key" data-key="Quote">
+                        <span>э</span>
+                        <span class="key-super">"</span>
+                    </button>
+                    <button class="key ntr"></button>
+                </div>
+                <div class="row">
+                    <button class="key shift-l"></button>
+                    <button class="key" data-key="Backslash">
+                        <span>\</span>
+                        <span class="key-super">\</span>
+                    </button>
+                    <button class="key" data-key="KeyZ">
+                        <span>я</span>
+                        <span class="key-super">z</span>
+                    </button>
+                    <button class="key" data-key="KeyX">
+                        <span>ч</span>
+                        <span class="key-super">x</span>
+                    </button>
+                    <button class="key" data-key="KeyC">
+                        <span>с</span>
+                        <span class="key-super">c</span>
+                    </button>
+                    <button class="key" data-key="KeyV">
+                        <span>м</span>
+                        <span class="key-super">v</span>
+                    </button>
+                    <button class="key" data-key="KeyB">
+                        <span>и</span>
+                        <span class="key-super">b</span>
+                    </button>
+                    <button class="key" data-key="KeyN">
+                        <span>т</span>
+                        <span class="key-super">n</span>
+                    </button>
+                    <button class="key" data-key="KeyM">
+                        <span>ь</span>
+                        <span class="key-super">m</span>
+                    </button>
+                    <button class="key" data-key="Comma">
+                        <span>б</span>
+                        <span class="key-super">&lt;</span>
+                    </button>
+                    <button class="key" data-key="Period">
+                        <span>ю</span>
+                        <span class="key-super">&gt;</span>
+                    </button>
+                    <button class="key" data-key="Slash">
+                        <span>.</span>
+                        <span class="key-super">?</span>
+                    </button>
+                    <button class="key shift-r"></button>
+                </div>
+            </div>
+        </main>
+        <script src="../keyboard.js"></script>
+        <script src="demo.js"></script>
+    </body>
+</html>
