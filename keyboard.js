@@ -311,4 +311,20 @@ class Keyboard {
         this.element.selectionEnd   = start+1
         this.element.focus()
     }
+
+    /**
+     * 
+     * @param {Map<String, Object>} layoutMap 
+     */
+    updateLayout(layoutMap){
+        for(const key of layoutMap.entries()){
+            // Key[0] = KeyA, KeyZ, Comma, etc.
+            const entry = this.layouts.get(key[0])
+
+            if(entry)
+                // Go through each locale for that key.
+                for(const locale in key[1])
+                    entry[locale] = key[1][locale]
+        }
+    }
 }
