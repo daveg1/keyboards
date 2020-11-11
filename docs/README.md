@@ -1,2 +1,2 @@
 ## Keyboard.js Demo
-You should run this in a local server.
+View at https://rigbone1.github.io/keyboards/
