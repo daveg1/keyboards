@@ -45,6 +45,7 @@ kb.updateLayout(
 ```
 
 ## Todo
+- Add number row for the visual keyboard (demo)
 - Update updateLayout to let you add new locales
 
 You can view the demo <a href="./docs">here</a>.
